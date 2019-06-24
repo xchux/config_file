@@ -1,0 +1,29 @@
+[user]
+    name = 
+    email = 
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[alias]
+    ci = commit
+    ca = commit --amend
+    st = status
+    co = checkout
+    br = branch
+    df = diff
+    rb = rebase
+    rbc = rebase --continue
+    rba = rebase --abort
+    staged = diff --staged
+    who = shortlog -s
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lga = log --graph --pretty=ol --abbrev-commit --date=local --all
+[pretty]
+    ol = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold black)- %Creset%Cgreen(%ar)%Creset
