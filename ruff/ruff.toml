@@ -1,0 +1,72 @@
+# Ruff configuration template
+# See https://docs.astral.sh/ruff/configuration/ for more details
+
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.12
+target-version = "py312"
+
+[lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+select = ["F", "E", "W", "C90", "I", "N", "ANN", "UP", "S", "B", "A", "C4", "RET", "SLF", "SIM", "TID", "TD", "PLC", "PLE", "PLR", "PLW", "TRY", "FLY", "RUF"]
+ignore = [
+  "ANN101", # Missing type annotation for {name} in method
+  "ANN102", # Missing type annotation for {name} in classmethod
+  "COM812", # conflict
+  "CPY",    # no copyright notices
+  "D203",   # `one-blank-line-before-class` (D203) and `no-blank-line-before-class` (D211) are incompatible
+  "D205",   # 1 blank line required between summary line and description
+  "D212",   # `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible
+  "D301",   # Use `r"""` if any backslashes in a docstring
+  "D401",   # The first line of docstring should be in imperative mood
+  "DOC",    # no support for restructuredtext
+  "S104",   # Possible binding to all interfaces
+  "I002",   # Missing required import: `from __future__ import annotations`
+  "PTH",    # `os.path` unusable
+  "T201",   # `print` found
+  "BLE001", # Do not catch blind exception: `Exception`
+  "F401",   # Imported but unused
+  "F841",   # Assigned to but never used
+  "SIM222", # Use `(True)` instead of `(True) or ...`
+  "UP031",  # Use format specifiers instead of percent format // % info -> {info}
+  "N8",     # don't care about naming rule
+  "N999",   # Invalid module name
+  "PLR09",  # too many public methods and too many return statements
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["F", "E", "W", "I", "UP", "B", "C4", "SIM", "TID", "RUF"]
+unfixable = []
+exclude = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Enable auto-formatting of code examples in docstrings. Markdown,
+# reStructuredText code/literal blocks and doctests are all supported.
+#
+# This is currently disabled by default, but it is planned for this
+# to be opt-out in the future.
+docstring-code-format = false
+
+# Set the line length limit used when formatting code snippets in
+# docstrings.
+#
+# This only has an effect when the `docstring-code-format` setting is
+# enabled.
+docstring-code-line-length = "dynamic"
+
+[lint.isort]
+# Use a single line for imports if they fit.
+force-single-line = false
