@@ -11,6 +11,7 @@ Included config examples:
 - tmux
 - vim
 - shell setup scripts
+- AI agents (Claude Code / Codex / Gemini CLI / VS Code / Cursor / Antigravity) — see [ai-center](ai-center/README.md)
 
 ## Usage
 keep habit setting

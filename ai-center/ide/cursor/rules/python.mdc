@@ -1,0 +1,10 @@
+---
+description: Python conventions — uv, ruff, pytest, type hints
+globs: "**/*.py"
+alwaysApply: false
+---
+
+- Python 3.12+, type-annotate public functions (`list[str]`, `X | None`).
+- Use `uv` for env/deps (`uv add`, `uv run`), `ruff` for lint/format, `pytest` for tests.
+- Prefer `pathlib`, f-strings, `dataclasses`; use `logging` instead of `print` in library code.
+- Raise specific exceptions; never bare `except:`.
