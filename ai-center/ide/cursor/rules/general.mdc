@@ -1,0 +1,11 @@
+---
+description: Global working conventions (mirrors ai-center/AGENTS.md)
+alwaysApply: true
+---
+
+- Reply in Traditional Chinese (zh-TW); keep code, identifiers, and commit messages in English.
+- Read surrounding code before editing; match its naming and structure. Keep changes small and focused.
+- Never hardcode secrets; use environment variables.
+- Ask before destructive commands (`rm -rf`, `git push --force`, `git reset --hard`).
+- Add or update tests for behavior changes and run them before finishing.
+- Conventional Commits: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`.

@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "anthropic.claude-code",
+    "openai.chatgpt",
+    "github.copilot-chat",
+    "charliermarsh.ruff",
+    "ms-python.python",
+    "eamodio.gitlens",
+    "vscodevim.vim"
+  ]
+}

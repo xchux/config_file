@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/affaan-m/ECC/main/schemas/ecc-install-config.schema.json",
+  "version": 1,
+  "profile": "minimal",
+  "include": [
+    "lang:python",
+    "capability:security"
+  ],
+  "exclude": []
+}
